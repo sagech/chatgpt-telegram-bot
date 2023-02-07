@@ -25,7 +25,7 @@ This is a Node.js-based Telegram Bot application that leverages [OpenAI's API Ke
 | `TELEGRAM_TOKEN`  | Obtain a Telegram bot token from [BotFather](https://t.me/BotFather) using the `/newbot` command  |
 | `CHATGPT_TOKEN`  | Obtain an OpenAI API Key from the [API Keys](https://platform.openai.com/account/api-keys) |
 | `ONLY_ALLOW_WHITELISTED_TELEGRAM_IDS` | Set to `true` to only allow whitelisted Telegram IDs to use the bot |
-| `WHITELISTED_TELEGRAM_IDS` | A comma-separated list of Telegram IDs to allow to use the bot. You can obtain user IDs by forwarding messages to [userinfobot](https://t.me/userinfobot) |
+| `WHITELISTED_TELEGRAM_IDS` | A comma-separated list of Telegram IDs to allow to use the bot. You can obtain user IDs by forwarding messages to [userinfobot](https://t.me/userinfobot). This variable is required if `ONLY_ALLOW_WHITELISTED_TELEGRAM_IDS` is set to `true`. |
 
 ## 🐳 Deployment via Docker
 
