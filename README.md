@@ -30,4 +30,4 @@ This is a Node.js-based Telegram Bot application that leverages [OpenAI's API Ke
 ## 🐳 Deployment via Docker
 
 1. You can build the Docker image for this project by running `docker build -t chatgpt-telegram-bot .`
-2. During container deployment, set the environment variables as defined in the `.env.sample` file.
+2. During container deployment, set the environment variables as defined in the `.env.example` file.
