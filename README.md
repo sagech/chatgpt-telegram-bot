@@ -3,16 +3,16 @@
 This is a Node.js-based Telegram Bot application that leverages [OpenAI's API Key](https://platform.openai.com/account/api-keys) to interface with ChatGPT and retrieve responses. This bot is equipped with the following functionalities:
 
 
-## Features
+## ✨ Features
 - Send a message to the Telegram bot and get a response from ChatGPT
 - Retention of conversation history in memory via ChatGPT, providing continuity to previous discussion threads
 - Option to reset conversation history by executing the "/reset" command for a new, refreshed interaction with ChatGPT.
 - Telegram user IDs whitelist to prevent abuse (Optional)
 
-## Demo
+## 👀 Demo
 ![demo](./demo.gif)
 
-## Installation
+## 🧑🏻‍💻 Installation
 
 1. Clone the repository
 2. Run `yarn install`
@@ -27,7 +27,7 @@ This is a Node.js-based Telegram Bot application that leverages [OpenAI's API Ke
 | ONLY_ALLOW_WHITELISTED_TELEGRAM_IDS | Set to `true` to only allow whitelisted Telegram IDs to use the bot |
 | WHITELISTED_TELEGRAM_IDS | A comma-separated list of Telegram IDs to allow to use the bot. You can obtain user IDs by forwarding messages to [userinfobot](https://t.me/userinfobot) |
 
-## Deployment via Docker
+## 🐳 Deployment via Docker
 
 1. You can build the Docker image for this project by running `docker build -t chatgpt-telegram-bot .`
 2. During container deployment, set the environment variables as defined in the `.env.sample` file.
