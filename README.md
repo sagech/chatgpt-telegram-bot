@@ -6,7 +6,7 @@ This is a Node.js-based Telegram Bot application that leverages [OpenAI's API Ke
 ## ✨ Features
 - Send a message to the Telegram bot and get a response from ChatGPT
 - Retention of conversation history in memory via ChatGPT, providing continuity to previous discussion threads
-- Option to reset conversation history by executing the "/reset" command for a new, refreshed interaction with ChatGPT.
+- Option to reset conversation history by executing the `/reset` command for a new, refreshed interaction with ChatGPT.
 - Telegram user IDs whitelist to prevent abuse (Optional)
 
 ## 👀 Demo
