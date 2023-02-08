@@ -135,16 +135,21 @@ bot.on('message', (msg) => {
 
     bot.sendChatAction(chatId, 'typing');
 
-    const chatgptResponse = await chatgptApi.sendMessage(msg.text, chatgptOptions);
-    chatgptResponded = true;
-
-    // Update conversation ID
-    if (!conversationId) {
-      setConversationId(msg.from.id, chatgptResponse.conversationId, chatgptResponse.id)
+    try {
+      const chatgptResponse = await chatgptApi.sendMessage(msg.text, chatgptOptions);
+      chatgptResponded = true;
+  
+      // Update conversation ID
+      if (!conversationId) {
+        setConversationId(msg.from.id, chatgptResponse.conversationId, chatgptResponse.id)
+      }
+  
+      // send a message to the chat with ChatGPT's response
+      bot.sendMessage(chatId, chatgptResponse.text);
+    } catch(error) {
+      const errorMessage = `ChatGPT API Error: ${error.statusCode} ${error.statusText}`;
+      bot.sendMessage(chatId, errorMessage);
     }
-
-    // send a message to the chat with ChatGPT's response
-    bot.sendMessage(chatId, chatgptResponse.text);
 
     // Remove user from processing queue
     processingQueueOfUserIds.splice(processingQueueOfUserIds.indexOf(msg.from.id), 1);
